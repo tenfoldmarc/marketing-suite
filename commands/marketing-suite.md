@@ -11,41 +11,64 @@ You are setting someone up with the Marketing Suite. Your job is to get them to 
 
 ---
 
-## Step 1: What are they here to do?
+## Step 1: Which skills do they want?
+
+First, look at which suite skills are already available in this session, so you never offer to install something they have.
 
 Ask exactly this, once:
 
-> "What are you trying to do first?
+> "Which part do you want? You can add the others any time.
 >
-> **A)** Run ads (Meta, Instagram, TikTok)
-> **B)** Build pages (opt-in, sales page, VSL)
-> **C)** Both, the whole funnel
-> **D)** Look at what competitors are running before I decide"
+> **1) Everything** (8 skills). The whole funnel: research competitors, write ads, make the creative, script the video, then build the page it all lands on.
+>
+> **2) Ads only** (4 skills). `/ad-spy` `/ad-copy` `/video-ad-copy` `/ad-image-gen`
+>
+> **3) Pages only** (4 skills). `/optin-page` `/sales-page` `/vsl-script` `/ghl-page`
+>
+> Not sure? Say **1**. It's the same setup either way and nothing runs unless you call it."
 
-Map the answer to a skill set:
+Map the answer:
 
-| Answer | Skills in play |
-|---|---|
-| A | `/ad-copy`, `/video-ad-copy`, `/ad-image-gen`, `/ad-spy` |
-| B | `/optin-page`, `/sales-page`, `/vsl-script`, `/ghl-page` |
-| C | all eight |
-| D | `/ad-spy` first, then ask A/B/C again after the first pull |
+| Answer | Bundle | Skills |
+|---|---|---|
+| 1 | `marketing-suite` | all eight |
+| 2 | `marketing-suite-ads` | `/ad-spy`, `/ad-copy`, `/video-ad-copy`, `/ad-image-gen` |
+| 3 | `marketing-suite-pages` | `/optin-page`, `/sales-page`, `/vsl-script`, `/ghl-page` |
 
-Say back in one line which skills they'll be using and that everything below is only asked once.
+### If the skills they picked are already installed
 
-**Check what's actually installed.** Look at which suite skills are available in this session. If they picked A and only the pages bundle is installed (or the reverse), tell them which plugin to add:
+Say one line confirming what they have, and go to Step 2.
 
+### If some are missing
+
+How you install depends on how they got here.
+
+**If they arrived by pasting the repo link** (the skill files are already on disk), copy the missing skill folders into `~/.claude/skills/` yourself, one folder per skill, then confirm what landed. Ask before copying. Never copy a folder that is already there.
+
+**If they installed as a plugin**, you cannot run a slash command for them. Give them the one line to paste and wait:
+
+```
+/plugin install marketing-suite@marketing-suite
+```
 ```
 /plugin install marketing-suite-ads@marketing-suite
 ```
 ```
 /plugin install marketing-suite-pages@marketing-suite
 ```
-```
-/plugin install marketing-suite@marketing-suite
-```
 
-Do not stop the setup over this. The profile you're about to build works for every skill, whenever they install it.
+Either way, **do not stop the setup over this.** The profile you build next works for every skill in the suite, whenever they install it. Say so, so nobody thinks they have to install first.
+
+### Then ask what they're doing first
+
+> "Last one before we start. What are you working on right now?
+>
+> **A)** Running ads
+> **B)** Building a page
+> **C)** Both
+> **D)** Just want to see what competitors are running"
+
+This only decides which optional questions you ask in Step 3 and which command you recommend at the end. It does not change what got installed.
 
 ---
 
