@@ -1,0 +1,93 @@
+{
+  "name": "marketing-suite",
+  "owner": {
+    "name": "tenfoldmarc"
+  },
+  "metadata": {
+    "description": "Eight Claude Code skills that run a full direct-response funnel: competitor research, ad copy, video scripts, ad images, VSLs, sales pages, opt-in pages, and GoHighLevel snippets. One shared business profile across all of them.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "marketing-suite",
+      "description": "All eight skills. Describe your business once, then run the whole funnel: /ad-spy, /ad-copy, /video-ad-copy, /ad-image-gen, /vsl-script, /sales-page, /optin-page, /ghl-page.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "author": {
+        "name": "tenfoldmarc"
+      },
+      "keywords": [
+        "marketing",
+        "copywriting",
+        "meta-ads",
+        "facebook-ads",
+        "direct-response",
+        "sales-page",
+        "vsl",
+        "landing-page",
+        "gohighlevel"
+      ],
+      "category": "marketing",
+      "skills": [
+        "./skills/ad-copy",
+        "./skills/video-ad-copy",
+        "./skills/ad-image-gen",
+        "./skills/ad-spy",
+        "./skills/vsl-script",
+        "./skills/sales-page",
+        "./skills/optin-page",
+        "./skills/ghl-page"
+      ]
+    },
+    {
+      "name": "marketing-suite-ads",
+      "description": "The ad half only. Spy on competitors, write the copy, script the video, generate the creative: /ad-spy, /ad-copy, /video-ad-copy, /ad-image-gen.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "author": {
+        "name": "tenfoldmarc"
+      },
+      "keywords": [
+        "meta-ads",
+        "facebook-ads",
+        "ad-copy",
+        "ugc",
+        "creative"
+      ],
+      "category": "marketing",
+      "skills": [
+        "./skills/ad-copy",
+        "./skills/video-ad-copy",
+        "./skills/ad-image-gen",
+        "./skills/ad-spy"
+      ]
+    },
+    {
+      "name": "marketing-suite-pages",
+      "description": "The page half only. Everything the traffic lands on: /optin-page, /sales-page, /vsl-script, /ghl-page.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "author": {
+        "name": "tenfoldmarc"
+      },
+      "keywords": [
+        "landing-page",
+        "sales-page",
+        "vsl",
+        "opt-in",
+        "gohighlevel",
+        "funnel"
+      ],
+      "category": "marketing",
+      "skills": [
+        "./skills/optin-page",
+        "./skills/sales-page",
+        "./skills/vsl-script",
+        "./skills/ghl-page"
+      ]
+    }
+  ]
+}
