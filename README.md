@@ -18,6 +18,23 @@ Install this skill for me: https://github.com/tenfoldmarc/marketing-suite
 
 Claude installs everything and runs the setup right there in the same conversation. You answer a few questions and you're building.
 
+<details>
+<summary>What gets installed where</summary>
+
+Every folder in `skills/` goes into `~/.claude/skills/`, and `commands/marketing-suite.md` goes into `~/.claude/commands/`. So after installing you have:
+
+```
+~/.claude/skills/ad-copy/          ~/.claude/skills/vsl-script/
+~/.claude/skills/video-ad-copy/    ~/.claude/skills/sales-page/
+~/.claude/skills/ad-image-gen/     ~/.claude/skills/optin-page/
+~/.claude/skills/ad-spy/           ~/.claude/skills/ghl-page/
+
+~/.claude/commands/marketing-suite.md
+```
+
+Restart Claude Code afterward so the new skills register. Nothing else is written until you run setup.
+</details>
+
 ### Option 2: install as a plugin (pick what you want, get updates)
 
 ```
