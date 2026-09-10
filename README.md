@@ -78,7 +78,9 @@ Either way, type `/marketing-suite` to set up.
 
 Most marketing tools make you re-explain your business every single time. These don't.
 
-The first time you open any skill, you answer 13 short questions, one at a time. Your name, what you sell, who buys it, what they've already tried, your proof, your story, how you talk. Skip anything. Type `done` to stop early.
+The first time you run setup, give it your website URL and your social accounts. It reads them and pre-fills most of the 13 questions from what's already online: what you sell, your price, who it's for, your proof, your story, how you talk. You confirm or correct what it found, then answer only what's left. Skip anything. Type `done` to stop early.
+
+No website yet? It just asks the 13 questions, one at a time.
 
 After that, every skill in the suite already knows you.
 

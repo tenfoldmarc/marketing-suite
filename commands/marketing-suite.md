@@ -72,11 +72,49 @@ This only decides which optional questions you ask in Step 3 and which command y
 
 ---
 
-## Step 2: The shared business profile (always, all paths)
+## Step 2a: Pre-fill from what's already online (always offer this first)
 
-Say: "Now the part that saves you the most time. I'll ask 13 short questions about your business. Every skill in the suite reads the answers, so you only ever do this once. Type `skip` on any, or `done` to stop early. Change anything later with `edit`."
+Most of the 13 answers already exist on the user's website and socials. Read those first so they only answer what's actually missing.
 
-Ask **one at a time**:
+Say: "Before I ask you anything, let me read what's already out there. Drop your website URL and any social accounts you want me to look at (Instagram, YouTube, TikTok, LinkedIn, a Facebook page). One message is fine. Say `skip` if you'd rather just answer the questions."
+
+If they give you anything:
+
+1. **Read the website** with whatever fetch tool the session has (WebFetch, Tavily, agent-browser, Apify, a browser tool). Start at the homepage, then follow to about, pricing, services, testimonials, and FAQ pages if they exist. Cap it around 6 pages.
+2. **Try each social account** the same way. Instagram and TikTok often block a plain fetch. If a scraping connector is connected (Apify, agent-browser), use it. If a page won't load, say which one and move on. **Never block setup on a social page.**
+3. **Fill the draft below. Only fill a field when the source actually says it.** Never guess, never round up, never infer a price or a result that isn't written down. Anything you can't support stays blank.
+
+| Q | Field | Where it usually lives |
+|---|---|---|
+| 1 | name | about page, bio, footer, video intros |
+| 2 | brand | site title, handle |
+| 3 | what you sell and what it does | homepage hero, services or offers page |
+| 4 | price and how they buy | pricing, checkout, booking, "apply" pages |
+| 5 | who it's for | who the copy addresses ("for [X] who...") |
+| 6 | the problem in their words | testimonials, reviews, comments. Quote raw. |
+| 7 | what they already tried | FAQ, objection copy, "unlike other..." lines |
+| 8 | mechanism | "how it works", a named method or framework |
+| 9 | proof | numbers, case studies, follower and subscriber counts, testimonials |
+| 10 | story | about page, founder bio, pinned video |
+| 11 | voice | 2 or 3 raw excerpts of their own captions or emails |
+| 12 | do not say | almost never online. Ask. |
+| 13 | output folder | Ask. |
+
+4. **Show the draft** as a numbered list, one line per field, each with its source in parens ("from your pricing page", "from your IG bio"). Then say: "Here's what I pulled. Reply with the number of anything that's wrong and the fix, or say `looks good` and I'll only ask what's missing."
+5. **Apply their corrections.** Then ask **only the fields still blank**, one at a time, using the exact wording in Step 2b.
+6. **Bank the raw material.** Paste testimonials, reviews, and caption excerpts into the profile's Raw language bank with the URL they came from. Under Proof, tag anything pulled from the web as `(found online, confirm permission before use)` so no skill treats it as cleared.
+
+If they say `skip`, go straight to Step 2b and ask all 13.
+
+---
+
+## Step 2b: The 13 questions (ask only what Step 2a didn't fill)
+
+If Step 2a filled some fields, say: "[X] of 13 already filled from your site. [Y] to go. Type `skip` on any, or `done` to stop early."
+
+If nothing was pre-filled, say: "Now the part that saves you the most time. I'll ask 13 short questions about your business. Every skill in the suite reads the answers, so you only ever do this once. Type `skip` on any, or `done` to stop early. Change anything later with `edit`."
+
+Ask **one at a time**, skipping anything already confirmed:
 
 1. What's your name?
 2. What's your business or brand called?
@@ -303,6 +341,7 @@ Then one closing line: "Everything you just told me is saved. No skill in the su
 
 ## Rules
 
+- Pre-filled fields are drafts until the user confirms them. Never write a fact into the profile that the source doesn't plainly state.
 - One question at a time. Never bundle.
 - Never ask for an API key, token, or password in chat. Keys go in `~/.claude/ad-profiles/.env`, written by the user.
 - Never install anything without asking first.
